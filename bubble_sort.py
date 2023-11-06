@@ -22,3 +22,4 @@ while finished == False:
     
 print(array)
 print(iterations)
+end = input()
