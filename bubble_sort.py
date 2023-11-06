@@ -1,7 +1,10 @@
 #Bubble Sort Implementation and Visualization using 
+import random
+def random_array(l):
+    global array
+    array = random.randint(0,l)
 
 def sorting_algorithm():
-    array = []
     n = 0
     global iterations
     iterations = 0
