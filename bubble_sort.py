@@ -45,12 +45,7 @@ class GraphColumn:
             turtle.right(90)
         turtle.end_fill()
 
-cord = -10
-for i in range(60):
-    cord = cord + 40
-    c1 = GraphColumn(cord - 500, 0)
-    c1.create_in_graph(100, 10)
-        
+
 
 def random_array(l):
     global array
