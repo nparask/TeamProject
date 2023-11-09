@@ -30,11 +30,11 @@ class GraphColumn:
 
         self.starting_point_x = starting_point_x
         self.starting_point_y = starting_point_y
-    def create_in_graph(height, width):
+    def create_in_graph(self, height, width):
         self.height = height
         self.width = width
         turtle.teleport(self.starting_point_x, self.starting_point_y, fill_gap = False )
-        turtle.setheading(0)
+        turtle.setheading(90)
         turtle.begin_fill()
         for i in range(2):
             turtle.forward(self.height)
@@ -43,6 +43,8 @@ class GraphColumn:
             turtle.right(90)
         turtle.end_fill()
 
+c1 = GraphColumn(0,0)
+c1.create_in_graph(100, 10)
         
 
 def random_array(l):
