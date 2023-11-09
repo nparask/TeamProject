@@ -1,8 +1,10 @@
 #Bubble Sort Implementation and Visualization using 
 import random
 import turtle
+import time
 iterations = 0
 array = []
+turtle.speed(0)
 while True:
     choice = input("To generate a random array of random lenght press 1 and to give a certain array press 2: ")
     if choice == "1":
@@ -43,8 +45,11 @@ class GraphColumn:
             turtle.right(90)
         turtle.end_fill()
 
-c1 = GraphColumn(0,0)
-c1.create_in_graph(100, 10)
+cord = -10
+for i in range(60):
+    cord = cord + 40
+    c1 = GraphColumn(cord - 500, 0)
+    c1.create_in_graph(100, 10)
         
 
 def random_array(l):
