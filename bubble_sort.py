@@ -25,9 +25,25 @@ while True:
         print("Please type 1,2 or press Enter")
 
 
+class GraphColumn:
+    def __init__(self, starting_point_x, starting_point_y):
 
+        self.starting_point_x = starting_point_x
+        self.starting_point_y = starting_point_y
+    def create_in_graph(height, width):
+        self.height = height
+        self.width = width
+        turtle.teleport(self.starting_point_x, self.starting_point_y, fill_gap = False )
+        turtle.setheading(0)
+        turtle.begin_fill()
+        for i in range(2):
+            turtle.forward(self.height)
+            turtle.right(90)
+            turtle.forward(self.width)
+            turtle.right(90)
+        turtle.end_fill()
 
-
+        
 
 def random_array(l):
     global array
