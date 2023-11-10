@@ -5,6 +5,34 @@ import time
 iterations = 0
 array = []
 turtle.speed(0)
+
+def random_array(l):
+    global array
+    for i in range(0, l):
+        array.append(random.randint(0,9999))
+    print(array)
+    return array
+
+def sorting_algorithm():
+    n = 0
+    l = len(array)
+    for j in range(l):
+        array[j]=int(array[j])
+    finished = False
+    global iterations
+    iterations = 0
+    while finished == False:
+        finished = True
+        for i in range(l-n-1):
+            iterations += 1
+            if array[i] > array[i+1]:
+                
+                array[i], array[i+1] = array[i+1], array[i]
+                finished = False
+        n +=1
+    return array
+
+
 while True:
     choice = input("To generate a random array of random lenght press 1 and to give a certain array press 2: ")
     if choice == "1":
@@ -47,31 +75,6 @@ class GraphColumn:
 
 
 
-def random_array(l):
-    global array
-    for i in range(0, l):
-        array.append(random.randint(0,9999))
-    print(array)
-    return array
-
-def sorting_algorithm():
-    n = 0
-    l = len(array)
-    for j in range(l):
-        array[j]=int(array[j])
-    finished = False
-    global iterations
-    iterations = 0
-    while finished == False:
-        finished = True
-        for i in range(l-n-1):
-            iterations += 1
-            if array[i] > array[i+1]:
-                
-                array[i], array[i+1] = array[i+1], array[i]
-                finished = False
-        n +=1
-    return array
 
 print("The sorted array is:", sorting_algorithm())
 print(f"It took {iterations} iterations.")
