@@ -1,4 +1,4 @@
-#Bubble Sort Implementation and Visualization using 
+#Bubble Sort Implementation and Visualization using Turtle
 import random
 import turtle
 import time
