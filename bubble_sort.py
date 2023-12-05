@@ -7,7 +7,18 @@ import turtle
 import time
 iterations = 0
 array = []
-turtle.speed(0)
+
+#Window setup
+window = turtle.Screen()
+window.setup(height=600, width=600)
+turtle.speed("fastest")
+
+def new_collumn(array):
+    dx = 600//len(array)
+    print(len(array))
+    for i in range(0,len(array)-1):
+        column = GraphColumn(i*dx,0)
+        column.create_in_graph(array[i],dx)
 
 def random_array(l):
     global array
@@ -35,13 +46,14 @@ def sorting_algorithm():
         n +=1
     return array
 
-
+# Main loop
 while True:
     choice = input("To generate a random array of random lenght press 1 and to give a certain array press 2: ")
     if choice == "1":
         try:
-            input_array_lenght = int(input("Please type the lenght of the array you want to generate"))
+            input_array_lenght = int(input("Please type the lenght of the array you want to generate: "))
             random_array(input_array_lenght)
+            new_collumn(array)
             break
         except:
             print("Please input a corrent upper end for the array")
